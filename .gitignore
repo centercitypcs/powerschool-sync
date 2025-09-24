@@ -1,0 +1,15 @@
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# direnv caches, etc.
+.direnv/
+
+# pre-commit - normally we'd keep this but I manage it with Nix so it's just a
+# link into the Nix store and doesn't want to be versioned.
+.pre-commit-config.yaml

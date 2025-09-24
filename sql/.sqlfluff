@@ -1,0 +1,30 @@
+# vim:ft=cfg
+
+[sqlfluff]
+dialect = oracle
+templater = placeholder
+exclude_rules = structure.column_order
+
+[sqlfluff:templater:placeholder]
+param_style = colon
+
+[sqlfluff:indentation]
+indented_joins = True
+indented_using_on = True
+
+[sqlfluff:layout:type:colon]
+# keep colons touching their bind parameter identifiers
+spacing_before = single
+spacing_after = touch:inline
+
+[sqlfluff:rules:references.special_chars]
+# allow multi-word quoted identifiers (for now)
+additional_allowed_characters = "
+allow_space_in_identifier = True
+
+# Oracle doesn't allow "AS" when creating table aliases
+[sqlfluff:rules:aliasing.table]
+aliasing = implicit
+
+# [sqlfluff:rules:references.quoting]
+# prefer_quoted_identifiers = False
