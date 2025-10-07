@@ -238,7 +238,6 @@ attach_vpn:
         --protocol=f5 \
         --quiet \
         --user="${F5_USERNAME}" \
-        --servercert="${F5_SERVERCERT}" \
         "${F5_CONNECT_URL}" >/dev/null
 
 # detach from the PowerSchool VPN
