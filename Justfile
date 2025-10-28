@@ -39,7 +39,7 @@ EARLIEST_EXIT := "earliest_exit=25-AUG-2025"
 # run tools via "uvx"
 
 RECORDS_EXE := "uvx --quiet --with oracledb --with docopt-ng records"
-GAM_EXE := "uvx --quiet --from gam7 gam"
+GAM_EXE := "uvx --quiet --with packaging --from gam7 gam"
 
 # list all targets
 _default:
