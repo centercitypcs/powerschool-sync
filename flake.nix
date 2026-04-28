@@ -26,7 +26,7 @@
         checks.pre-commit-check = inputs.pre-commit-hooks.lib.${system}.run {
           src = ./.;
           hooks = {
-            nixfmt-rfc-style.enable = true;
+            nixfmt.enable = true;
             trim-trailing-whitespace.enable = true;
             end-of-file-fixer.enable = true;
             check-yaml.enable = true;
