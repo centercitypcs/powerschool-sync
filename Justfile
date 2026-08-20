@@ -30,11 +30,11 @@ export AP_UPDATE_FILE := ASSET_PANDA_OUTPUT_DIR / "asset_panda_staff_updates.csv
 
 # query parameters for Illuminate queries
 
-ACADEMIC_YEAR := "academic_year=2025-2026"
-FIRST_DAY := "first_day=01-JUL-2025"
-LAST_DAY := "last_day=31-JUL-2026"
-YEAR_ID := "year_id=35"
-EARLIEST_EXIT := "earliest_exit=25-AUG-2025"
+ACADEMIC_YEAR := "academic_year=2026-2027"
+FIRST_DAY := "first_day=01-JUL-2026"
+LAST_DAY := "last_day=31-JUL-2027"
+YEAR_ID := "year_id=36"
+EARLIEST_EXIT := "earliest_exit=25-AUG-2026"
 
 # run tools via "uvx"
 
