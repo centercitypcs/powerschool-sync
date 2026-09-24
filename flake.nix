@@ -45,6 +45,7 @@
             just
             openconnect
             pwgen
+            sshpass
             uv
           ];
 

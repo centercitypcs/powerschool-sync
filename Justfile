@@ -312,7 +312,7 @@ generate_illuminate_exports: ensure_data_dir attach_vpn && detach_vpn compare_ex
 push_exports: ensure_data_dir
     #!/usr/bin/env bash
 
-    sftp -F "${ILLUMINATE_SSH_CONFIG_FILE}" -b - illuminate <<EOT
+    sshpass -e sftp -F "${ILLUMINATE_SSH_CONFIG_FILE}"  illuminate <<EOT
     lcd "{{ ILLUMINATE_POWERSCHOOL_EXPORTS_DIR }}"
     put *.txt
     exit
@@ -325,7 +325,7 @@ pull_exports: ensure_data_dir
     # Pull existing import files down from Illuminate SFTP
     # for comparison
 
-    sftp -F "${ILLUMINATE_SSH_CONFIG_FILE}" -b - illuminate <<EOT
+    sshpass -e sftp -F "${ILLUMINATE_SSH_CONFIG_FILE}" illuminate <<EOT
     lcd {{ ILLUMINATE_ILLUMINATE_EXPORTS_DIR }}
     get courses.txt
     get enrollment.txt
